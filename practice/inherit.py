@@ -92,3 +92,26 @@ polar = Pola("Royal Enfield", "1 Lakh", nanar.home)
 print(f"Kakar bike: {kakar.bike}") 
 print(f"Nanar  bike: {nanar.bike}")   
 print(f"Polar bike: {polar.bike}")
+
+
+
+
+class Akib:
+    Education="JU"
+    Designation="Software Engineer"
+    Office="WALTON"
+    
+class Efty(Akib):
+    Education="DMC"
+    Designation="Medical Student"
+    Office="Dhaka"
+    
+class Nadim(Efty):
+    Education="BAU"
+    Designation="Agri Student"
+    Office="Mymensingh"    
+    
+v1=Efty()
+print(v1.Designation)      
+v2=Nadim()
+print(v2.Office)
