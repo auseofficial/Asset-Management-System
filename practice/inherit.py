@@ -97,21 +97,21 @@ print(f"Polar bike: {polar.bike}")
 
 
 class Akib:
-    Education="JU"
-    Designation="Software Engineer"
-    Office="WALTON"
-    
-class Efty(Akib):
-    Education="DMC"
-    Designation="Medical Student"
-    Office="Dhaka"
-    
-class Nadim(Efty):
-    Education="BAU"
-    Designation="Agri Student"
-    Office="Mymensingh"    
-    
-v1=Efty()
-print(v1.Designation)      
-v2=Nadim()
-print(v2.Office)
+    def __init__(self,Education,Designation,Office):   
+     self.Education=Education
+     self.Designation=Designation
+     self.Office=Office
+class Efty(Akib):     
+    def __init__(self,Education,Designation,Office):   
+      super().__init__(Education,Designation,Office)
+class Nadim(Efty):    
+    def __init__(self,Education,Designation,Office):   
+       super().__init__(Education,Designation,Office)
+
+Boss1=Akib("JU","Software Engineer","WALTON")
+Boss2=Efty("DMC","Medical Student","Dhaka")
+Boss3=Nadim("BAU","Agri Student","Mymensingh")       
+          
+print(Boss1.Designation)      
+print(Boss2.Office)
+print(Boss3.Education)
