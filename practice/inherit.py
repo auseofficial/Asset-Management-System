@@ -68,22 +68,27 @@ print(v.bike)
 # Hybrid And Hierarchical Inheritance
 
 class Abba:
-    def __init__(self,bike,taka,home):
-        self.bike=bike
-        self.taka=taka
-        self.home=home
+    def __init__(self, bike, taka, home):
+        self.bike = bike
+        self.taka = taka
+        self.home = home
+
 class Kaka(Abba):
-    def __init__(self,bike,taka,home):
-         super().__init__(bike,taka,home)
+    def __init__(self, bike, taka, home):
+        super().__init__(bike, taka, home)
+
 class Nana(Kaka):
-    def __init__(self,bike,taka,home):
-        super().__init__(bike,taka,home) 
+    def __init__(self, bike, taka, home):
+        super().__init__(bike, taka, home)
+
 class Pola(Nana):
-    def __init__(self,bike,taka,home):
-        super().__init__(bike,taka,home)
-        
-Kaka=Kaka("Pulsar", "1 Crore", "1st floor") 
-nana = Nana("R15", "100 Crore", "8th floor")
-pola = Pola("Royal Enfield", "1 Lakh", nana.home)    
-                        
-print(Kaka.bike)
+    def __init__(self, bike, taka, home):
+        super().__init__(bike, taka, home)
+
+kakar = Kaka("Pulsar", "1 Crore", "1st floor")
+nanar = Nana("R15", "100 Crore", "8th floor")
+polar = Pola("Royal Enfield", "1 Lakh", nanar.home)
+
+print(f"Kakar bike: {kakar.bike}") 
+print(f"Nanar  bike: {nanar.bike}")   
+print(f"Polar bike: {polar.bike}")
