@@ -126,7 +126,6 @@ class Akib:
 obj1= Akib("WALTON","Software Engineer","Four Months")
 print(obj1.duration)
 
-
 class Animal:
     def __init__(self,eyes,legs):
         self.eyes=eyes
