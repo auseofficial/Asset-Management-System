@@ -133,3 +133,4 @@ class Animal:
         self.legs=legs
 obj=Animal("black","white")
 print(obj.legs)
+
