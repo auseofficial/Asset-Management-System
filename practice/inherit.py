@@ -94,7 +94,7 @@ print(f"Nanar  bike: {nanar.bike}")
 print(f"Polar bike: {polar.bike}")
 
 
-
+#Practice
 
 class Akib:
     def __init__(self,Education,Designation,Office):   
