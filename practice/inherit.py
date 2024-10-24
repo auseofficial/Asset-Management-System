@@ -93,7 +93,6 @@ print(f"Kakar bike: {kakar.bike}")
 print(f"Nanar  bike: {nanar.bike}")   
 print(f"Polar bike: {polar.bike}")
 
-
 #Practice
 
 class Akib:
