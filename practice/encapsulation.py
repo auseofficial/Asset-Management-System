@@ -4,4 +4,4 @@ class Parent:
         self.fathername=fathername
         
 obj1=Parent("Eshan","Abu Taher")        
-print(obj1.__name)    
+print(obj1.__name)
