@@ -132,4 +132,4 @@ class Animal:
         self.eyes=eyes
         self.legs=legs
 obj=Animal("black","white")
-print(obj.legs)        
+print(obj.legs)
