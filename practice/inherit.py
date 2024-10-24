@@ -115,3 +115,13 @@ Boss3=Nadim("BAU","Agri Student","Mymensingh")
 print(Boss1.Designation)      
 print(Boss2.Office)
 print(Boss3.Education)
+
+
+class Akib:
+    def __init__(self,company,designation,duration):
+     self.copmpany=company
+     self.designation=designation
+     self.duration=duration
+     
+obj1= Akib("WALTON","Software Engineer","Four Months")
+print(obj1.duration)     
