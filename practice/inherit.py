@@ -125,5 +125,3 @@ class Akib:
      
 obj1= Akib("WALTON","Software Engineer","Four Months")
 print(obj1.duration)
-
-
