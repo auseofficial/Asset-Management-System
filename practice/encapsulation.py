@@ -1,7 +1,11 @@
 class Parent:
-    def __init__(self,name,fathername):
-        self.__name=name
-        self.fathername=fathername
-        
-obj1=Parent("Eshan","Abu Taher")        
-print(obj1.__name)
+    def __init__(self, name, fathername):
+        self.name = name
+        self.fathername = fathername
+    
+    def details(self):
+        print("Name:", self.name, "Father's Name:", self.fathername)
+
+obj1 = Parent("Eshan", "Abu Taher")
+
+obj1.details()
