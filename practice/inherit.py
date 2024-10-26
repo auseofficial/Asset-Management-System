@@ -116,19 +116,43 @@ print(Boss2.Office)
 print(Boss3.Education)
 
 
-class Akib:
-    def __init__(self,company,designation,duration):
-     self.copmpany=company
-     self.designation=designation
-     self.duration=duration
-     
-obj1= Akib("WALTON","Software Engineer","Four Months")
-print(obj1.duration)
-
 class Animal:
     def __init__(self,eyes,legs):
         self.eyes=eyes
         self.legs=legs
-obj=Animal("black","white")
-print(obj.legs)
+    def details(self):
+        print(f"Eyes :{self.legs}") 
+           
+obj1=Animal("black","white")
+print(obj1.legs)
 
+
+# Create a base class Person with attributes name and age, and a method display_info that prints these details. 
+# Then, create a derived class Student that inherits from Person and adds an 
+# additional attribute grade. Override the display_info method in Student to include the grade when displaying information.
+
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def display_info(self):
+        print(f"Name: {self.name}, Age: {self.age}")
+
+class Student(Person):
+    def __init__(self, name, age, grade):
+        super().__init__(name, age) 
+        self.grade = grade  
+
+    def display_info(self):
+
+        print(f"Name: {self.name}, Age: {self.age}, Grade: {self.grade}")
+
+
+obj1 = Person("Akib Us Suny Eshan", 25)
+obj2 = Student("Akib Us Suny Eshan", 25, "A")
+
+print(obj1.name) 
+print(obj1.age) 
+print(obj2.grade)
