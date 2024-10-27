@@ -1,25 +1,3 @@
-class Parent:
-    def __init__(self, name, fathername):
-        self.name = name
-        self.fathername = fathername
-    
-    def details(self):
-        print("Name:", self.name, "Father's Name:", self.fathername)
-
-obj1 = Parent("Eshan", "Abu Taher")
-obj2 = Parent("Mama", "Kaka")
-
-obj1.details()
-obj2.details()
-
-
-class Car:
-    def __init__(self,color):
-        self.color=color
-    
-car1=Car("Blue")
-print(car1.color)    
-
 class BankAccount:
     def __init__(self, account_holder, balance):
         self.account_holder = account_holder
@@ -49,10 +27,12 @@ class BankAccount:
 # Creating an account
 account = BankAccount("Akib Us Suny Eshan", 1000)
 
-# Using public methods to access private balance
+# Using public methods to access the private balance
 print(f"Initial Balance: ${account.get_balance()}")
 account.deposit(500)
 print(f"Balance after deposit: ${account.get_balance()}")
 account.withdraw(300)
 print(f"Balance after withdrawal: ${account.get_balance()}")
 
+# Accessing the private balance directly (not recommended, but possible)
+print(f"Direct access to balance: ${account._BankAccount__balance}")
