@@ -128,6 +128,8 @@ class Brac:
 obj1= Brac("Akib",10000)
 obj1.name="Suny"
 print(obj1.name)
-print(obj1.remaining())        
+print(obj1.remaining())
+
+
         
                
