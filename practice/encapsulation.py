@@ -107,4 +107,6 @@ class DBBL:
     
 obj1=DBBL("Akib",10000)
 obj1.deposit(100000)
-print(obj1.remaining_balance())           
+print(obj1.remaining_balance())    
+obj1.name="Eshan"
+print(obj1.name)       
