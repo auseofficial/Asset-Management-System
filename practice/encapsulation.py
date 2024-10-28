@@ -109,4 +109,25 @@ obj1=DBBL("Akib",10000)
 obj1.deposit(100000)
 print(obj1.remaining_balance())    
 obj1.name="Eshan"
-print(obj1.name)       
+print(obj1.name)    
+
+
+#3rd example
+
+class Brac:
+    def __init__(self,name,balance):
+        self.name=name
+        self.__balance=balance
+        
+    def deposit(self,amount):
+        self.__balance += amount
+
+    def remaining (self):
+        return self.__balance    
+        
+obj1= Brac("Akib",10000)
+obj1.name="Suny"
+print(obj1.name)
+print(obj1.remaining())        
+        
+               
