@@ -90,3 +90,24 @@ circle1 = Circle("Cir", 5)
 
 print(f"Here is the output: The area of {rectangle1.name} is {rectangle1.area()}")
 print(f"The area of the {circle1.name} is: {circle1.area()}")
+
+
+#Example_4
+
+class Animal:
+    def __init__(self,name):
+        self.name=name
+    def make_sound(self):
+        print("auuuuuuu")
+
+class Cat(Animal):
+    def __init__(self,name,color):
+        super().__init__(name)
+        self.color=color
+        print("WhiteHusky")
+        
+don=Animal("Husky")
+don.make_sound()
+don2=Cat("White Husky","White")
+print(f"{don2.color}")     
+            
