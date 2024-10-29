@@ -17,7 +17,7 @@ class Calculator:
         return x / y
 
 obj1 = Calculator()
-     
+
 while True:
     print("\nOptions:")
     print("1: Add")
