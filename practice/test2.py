@@ -23,24 +23,29 @@ class Product:
 
 class Shop:
     def __init__(self):
-        self.products = []
+        self.products = []  # List to store products
 
     def add_product(self, product):
-        self.products.append(product)
+        self.products.append(product)  # Add product to the list
 
     def display_products(self):
         print("\nAvailable Products and Quantities:")
         for index, product in enumerate(self.products, start=1):
+            # Display each product with its index, name, price, and quantity
             print(f"{index}. {product.get_name()} - ${product.get_price()} - Quantity: {product.get_quantity()}")
 
     def buy_product(self, product_index, quantity):
+        # Check if the product index is valid
         if 0 < product_index <= len(self.products):
-            product = self.products[product_index - 1]
+            product = self.products[product_index - 1]  # Get the selected product
             if product.reduce_quantity(quantity):
+                # If successful, print a success message
                 print(f"\nCongratulations! You've successfully purchased {quantity} of {product.get_name()}.\n")
             else:
+                # If insufficient quantity, print an error message
                 print("\nSorry, insufficient quantity available.\n")
         else:
+            # If invalid selection, print an error message
             print("\nInvalid product selection.\n")
 
 
