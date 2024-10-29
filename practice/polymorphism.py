@@ -57,5 +57,4 @@ girl=Girl("gal",23)
 for person in (boy1,girl):
   person.gender()
   person.info() 
-  person.gender()  
-  
+  person.gender()
