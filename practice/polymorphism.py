@@ -110,4 +110,45 @@ don=Animal("Husky")
 don.make_sound()
 don2=Cat("White Husky","White")
 print(f"{don2.color}")     
+
+#Example_5
+
+from abc import ABC, abstractmethod
+
+class BankAccount(ABC):
+    def __init__(self,name,account_number,balance):
+        self.name=name
+        self.account_number=account_number
+        self.__balance=balance #Encap
+        
+    def deposit(self,amount):
+        self.__balance +=amount
+        print(f"Deposited Successfully :{amount}")
+        
+    def withdraw(self, amount):
+        if amount <= self._balance:
+            self._balance -= amount
+            print(f"Withdraw Successfully :{amount}")
+        else:
+            print("Insufficiant Funds!")
             
+    def get_balance(self):
+        return self.__balance
+    
+class SavingsAccount(BankAccount):
+    def __init__(self,account_number,balance,interest_rate=2):
+        super().__init__(account_number,balance)
+        self.interest_rate=interest_rate
+        
+    def add_interest(self):
+        interest=self.__balance * self.interest_rate
+        self.__balance += interest
+        print(f"Interest is: {interest}") 
+     
+    def account_type(self):
+        return "Savings Account"            
+        
+            
+            
+            
+                
