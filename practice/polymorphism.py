@@ -114,59 +114,49 @@ print(f"{don2.color}")
 #Example_5
 
 from abc import ABC, abstractmethod
-
-class BankAccount(ABC):
-    def __init__(self,name,account_number,balance):
-        self.name=name
-        self.account_number=account_number
-        self.__balance=balance #Encap
-        
-    def deposit(self,amount):
-        self.__balance +=amount
-        print(f"Deposited Successfully :{amount}")
-        
-    def withdraw(self, amount):
-        if amount <= self._balance:
-            self._balance -= amount
-            print(f"Withdraw Successfully :{amount}")
-        else:
-            print("Insufficiant Funds!")
-            
-    def get_balance(self):
-        return self.__balance
-    
-class SavingsAccount(BankAccount):
-    def __init__(self,account_number,balance,interest_rate=2):
-        super().__init__(account_number,balance)
-        self.interest_rate=interest_rate
-        
-    def add_interest(self):
-        interest=self.__balance * self.interest_rate
-        self.__balance += interest
-        print(f"Interest is: {interest}") 
-     
-    def account_type(self):
-        return "Savings Account"            
-        
-            
-            
-            
-from abc import ABC, abstractmethod
  
 class BankAccount(ABC):
-    def __init__(self,name,account_number,balance):
-       self.name=name
-       self.account_number=account_number
-       self.__balance=balance
-          
+    def __init__(self, name, account_number, balance):
+        self.name = name
+        self.account_number = account_number
+        self._balance = balance  # Protected attribute
+
     @abstractmethod
-    def deposit(self,amount):
+    def deposit(self, amount):
         pass
+
     @abstractmethod
-    def withdraw(self,amount):
+    def withdraw(self, amount):
         pass
+
     @abstractmethod
-    def check_balance(self):
+    def check_balance(self):  # Method name matched for subclass
         pass
+
+class SavingsAccount(BankAccount):
+    def deposit(self, amount):
+        self._balance += amount
+        return f"Deposited Successfully: {amount}, new balance is {self._balance}"
+                               
+    def withdraw(self, amount):
+        if amount > self._balance:
+            return "Insufficient Balance"
+        else:
+            self._balance -= amount
+            return f"Withdrawn successfully: {amount}, new balance is {self._balance}"
     
-                        
+    def check_balance(self): 
+        return f"This is your current balance: {self._balance}"
+
+name=input("Enter account holders name :")
+account_number=input("Enter your account number")
+balance=float(input("Enter initial balance :"))
+account=SavingsAccount(name,account_number,balance)
+deposit_amount=float(input("Enter the account to deposit :"))
+print(account.deposit(deposit_amount))
+withdraw_ammount=float(input("Enter the ammount you want to withdraw :"))
+print(account.withdraw(withdraw_ammount))
+
+
+
+
