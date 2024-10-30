@@ -151,4 +151,22 @@ class SavingsAccount(BankAccount):
             
             
             
-                
+from abc import ABC, abstractmethod
+ 
+class BankAccount(ABC):
+    def __init__(self,name,account_number,balance):
+       self.name=name
+       self.account_number=account_number
+       self.__balance=balance
+          
+    @abstractmethod
+    def deposit(self,amount):
+        pass
+    @abstractmethod
+    def withdraw(self,amount):
+        pass
+    @abstractmethod
+    def check_balance(self):
+        pass
+    
+                        
