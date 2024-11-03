@@ -147,7 +147,7 @@ class Circle(Shape):
 
     def area(self):
         return pi * self.radius * self.radius
-
+    
 # Example usage
 rectangle = Rectangle("Rectangle", 5, 3)
 circle = Circle("Circle", 4)
