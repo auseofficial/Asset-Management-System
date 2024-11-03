@@ -103,3 +103,80 @@ cat = Cat()
 animal_behaviour(dog)  # Output: Bark, It runs quickly
 animal_behaviour(cat)  # Output: Meow, It walks gracefully
 
+from math import Pi
+class Shape:
+    def __init__(self,name)
+     self.name=name
+     
+class Rectangle(Shape):
+    def __init__(self,name)
+     super().__init__(name)
+     
+     def area (self):
+         return self.length * self.width
+
+class Circle(Shape):
+    def __init__(self,radius)
+     self.radius=radius
+    super().__init__(name)
+         
+    def area(self):
+         return pi*self.radius*self.radius
+         
+         
+         
+from math import pi
+
+class Shape:
+    def __init__(self, name):
+        self.name = name
+
+class Rectangle(Shape):
+    def __init__(self, name, length, width):
+        super().__init__(name)
+        self.length = length
+        self.width = width
+
+    def area(self):
+        return self.length * self.width
+
+class Circle(Shape):
+    def __init__(self, name, radius):
+        super().__init__(name)
+        self.radius = radius
+
+    def area(self):
+        return pi * self.radius * self.radius
+
+# Example usage
+rectangle = Rectangle("Rectangle", 5, 3)
+circle = Circle("Circle", 4)
+
+print(f"{rectangle.name} area: {rectangle.area()}")  # Rectangle area: 15
+print(f"{circle.name} area: {circle.area()}")        # Circle area: 50.26548245743669
+
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+
+
+
+
+
+
+
+
