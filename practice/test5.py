@@ -20,7 +20,6 @@ obj2=Dog("Black")
 print(obj1.name)
 print(obj2.color)
 
-
 #Encapsulation
 
 class Bank:
