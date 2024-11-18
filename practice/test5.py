@@ -44,5 +44,25 @@ print(obj1.details())
 
 #Abstraction
 
-class Bank:
-    pass
+from abc import ABC, abstractmethod
+class Tiger:
+    @abstractmethod
+    def eat(self):
+     print("I am eating banana")
+     
+    @abstractmethod
+    def move(self):
+        print("It can move")
+class Cat(Tiger):
+    @abstractmethod
+    def categpry(self):
+        self.color="color"
+        self.harmful="yes"  
+        super().__init__()
+    def eat(self):
+        print("He loves to eat catfood")
+                 
+obj1=Cat()
+obj1.eat()
+         
+         

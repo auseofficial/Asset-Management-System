@@ -17,13 +17,12 @@ class Monkey(Animal):
     def eat(self):
         print("Kola khai")    
         
-layka=Monkey("Lucky")        
-layka.eat()           
+obj1=Monkey("Lucky")        
+obj1.eat()           
               
               
 #Example2              
-              
-              
+                          
 from abc import ABC, abstractmethod
 
 class Polygon(ABC):
