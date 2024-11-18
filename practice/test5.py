@@ -38,4 +38,3 @@ class Bank:
     
 obj1=Bank("Akib",12345678,4500)
 print(obj1.remaining())
-
