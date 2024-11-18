@@ -35,11 +35,14 @@ class Bank:
     def remaining(self):
         return self.__balance
     
+    def details(self):
+        return f"My name is {self.name} and my remaining balance is {self.__balance}"  
+      
 obj1=Bank("Akib",12345678,4500)
 print(obj1.remaining())
+print(obj1.details())
 
 #Abstraction
 
-
-
-
+class Bank:
+    pass
